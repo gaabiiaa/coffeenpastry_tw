@@ -1,0 +1,33 @@
+body{
+    height: 2000px; 
+    background-image: url('background1.jpg');
+    margin: 0;
+}
+
+.image-fade {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.5s ease; 
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none; /* doar opacitatea imaginii se modifica */
+}
+
+/* Opacitatea imaginii se schimba odata ce dam scroll in jos */
+.image-fade {
+    transition: opacity 0.5s ease;
+}
+
+/* When page is scrolled */
+body:has(.image-fade:in-viewport) .image-fade {
+    opacity: 0; 
+}

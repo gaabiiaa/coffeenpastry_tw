@@ -1,0 +1,428 @@
+/* Body and Layout */
+html{
+    scroll-behavior: smooth;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: #222;
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.menu-background, .menu {
+    width: 100%;
+    min-height: 50vh;
+    position:relative;
+    transform-style: preserve-3d;
+    height:100vh;
+}
+
+.menu-background::before{
+    content:"";
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    background: url("mainpage_refs/menu1.jpg") top center no-repeat;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2.2);
+    filter: blur(4px);
+}
+
+.menu-title{
+    top:15%;
+    left:50%;
+    position: absolute;
+    font-family: 'Franklin Gothic Heavy';
+    font-size:12vw;
+    color: rgb(245, 242, 236);
+    text-shadow:  2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(94, 50, 50, 0.5);
+    transform: scale(1,1.1) translate(-50%, 10%);
+}
+
+.menu-coffee{
+   
+    top: 50%;
+    left: 23.5%;
+    font-size: 2vw;
+    font-family: 'Franklin Gothic Heavy';
+    
+    position: absolute;
+    transform-style: preserve-3d;
+}
+.menu-coffee:hover{
+    display: inline-block; 
+    top: 50%;
+    left: 23.5%;
+    font-size: 2vw;
+    font-family: 'Franklin Gothic Heavy';
+    color: rgb(206, 150, 76);
+    position: absolute;
+    
+}
+
+.menu-pastry{
+    top: 50%;
+    left: 45.5%;
+    font-size: 2vw;
+    font-family: 'Franklin Gothic Heavy';
+    position: absolute;
+   
+}
+
+.menu-pastry:hover{
+    top: 50%;
+    left: 45.5%;
+    font-size: 2vw;
+    font-family: 'Franklin Gothic Heavy';
+    color: rgb(222, 184, 135);
+    background-color: rgb(222, 184, 135, 0.1);
+    position: absolute;
+    
+}
+
+.menu-specials{
+
+    top: 50%;
+    left: 67.5%;
+    font-size: 2vw;
+    font-family: 'Franklin Gothic Heavy';
+    position: absolute;
+   
+}
+.menu-specials:hover{
+    top: 50%;
+    left: 67.5%;
+    font-size: 2vw;
+    font-family: 'Franklin Gothic Heavy';
+    color: rgb(224, 204, 178);
+    background-color: rgb(222, 184, 135, 0.1);
+    position: absolute;
+    
+}
+
+/*
+.title{
+    top:30%;
+    left:50%;
+    position: absolute;
+    font-family: 'Franklin Gothic Heavy';
+    font-size:10vw;
+    color: whitesmoke;
+    text-shadow:  2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(94, 50, 50, 0.5);
+    transform: scale(1,1.1) translate(-50%, 10%);
+}
+
+.text{
+    top:60%;
+    left:30%;
+    position: absolute;
+    font-family: monospace;
+    font-size:3vw;
+    color: whitesmoke;
+    text-shadow:  2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(94, 50, 50, 0.5);
+    transform: scale(1,1.1) translate(-50%, 10%);
+}*/
+
+div .text-slogan:hover {
+    color: rgba(255, 235, 198, 0.445);
+    top:60%;
+    left:30%;
+    position: absolute;
+    font-family: monospace;
+    font-size:3vw;
+    text-shadow:  2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(94, 50, 50, 0.5);
+    transform: scale(1,1.1) translate(-50%, 10%);
+}
+.title-aboutus{
+    top:10%;
+    left:50%;
+    position: absolute;
+    font-family: monospace;
+    justify-content: center;
+    font-size:2vw;
+    color: whitesmoke;
+    text-shadow:  2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(94, 50, 50, 0.5);
+    transform: scale(1,1.1) translate(-50%, 10%);
+}
+.content-aboutus{
+    top:30%;
+    left:50%;
+    position: absolute;
+    font-family: monospace;
+    justify-content:space-around;
+    font-size:1vw;
+    color: whitesmoke;
+    text-shadow:  2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(94, 50, 50, 0.5);
+    transform: scale(1,1.1) translate(-50%, 10%);
+}
+
+.sticky-container {
+    position: sticky; 
+    top: 0; 
+    z-index: 10; 
+    background-color: #222;  
+    width:100%
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    margin: 1.5em auto; 
+    font-family: serif;
+}
+
+header h1 {
+    font-size: 4 rem;
+    color: 	rgb(247, 232, 209);
+    letter-spacing: 5px;
+    padding: 13px 0;
+}
+
+/* NAVIGATION */
+nav {
+    background-color:#222;
+    padding: 0.3em;
+    width: 100%;
+}
+ul.responsiveNav {
+    list-style: none;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav li {
+    margin: 0;
+    text-align: center;
+    width: 60%;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(247, 232, 209);
+    font-size: 1.3rem;
+    font-family: monospace;
+    padding: 0;
+    display: block;
+    transition: all 0.3s ease;
+    width:100%;
+    
+}
+
+nav a:hover {
+    text-decoration: underline white;
+    text-decoration-skip-ink: auto;
+    background-color: rgb(34, 34, 34, 0.7); 
+    color: #fff; 
+    padding:0;
+}
+
+.navbar-item {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    padding-top: 0.5%;
+}
+
+
+.menu-container {
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+    width: 80%;
+}
+
+
+.dropdown-container {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: 	rgb(34, 34, 34, 0.7);
+    width: 100%;  
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 0;
+}
+
+.menu-container:hover  .dropdown-container {
+    display: block;
+}
+
+
+.dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown li {
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown a {
+    font-size: 1.3rem;
+    padding: 1px;
+    background-color: transparent;
+    border: none;
+}
+
+/*MENU*/
+.section-title{
+    font-size: 4rem;
+    font-family: 'Franklin Gothic Heavy', sans-serif;
+    text-align: center;
+    margin-bottom: 4rem; 
+    color: rgb(206, 150, 76);
+    text-shadow:  2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(94, 50, 50, 0.5);
+    position: relative;
+    padding-bottom: 0.5rem; 
+    border-bottom: 3px solid rgb(94, 50, 50);
+    transition: color 0.3s ease;
+    transition: border-bottom-color 0.3s ease;
+    border-bottom: 3px solid transparent; 
+}
+.section-title::after {
+    content: "";
+    display: block;
+    width: 100%; 
+    height: 3px; 
+    background-color: rgb(206, 150, 76); 
+    margin-top: 10px; 
+}
+
+.section-title:hover {
+    color: rgba(206, 150, 76, 0.685); 
+    border-bottom-color: rgb(206, 150, 76); 
+}
+
+
+
+.menu-section{
+    background:#222;
+    color:white;
+    padding:50px 0 100px;
+}
+.menu-section .menu-list{
+    display:flex;
+    flex-wrap: wrap;
+    gap:110px;
+    align-items: center;
+    justify-content: center;
+}
+.menu-section .menu-list .menu-item{
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    text-align: center;
+    justify-content: space-between;
+    width: calc( 100% /3 - 110px);
+}
+.menu-section .menu-list .menu-item .name{
+    margin:10px 0; 
+    font-size: 2em;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+.menu-section .menu-list .menu-item .text{
+    font-size: 1em;
+}
+
+.menu-section .menu-list .menu-item .menu-img{
+    max-width:83%;
+    aspect-ratio: 1;
+    border-radius: 5%;
+
+}
+
+
+
+/* media */
+
+@media screen and (max-width: 1024px) {
+    .menu-title {
+        font-size: 15vw; 
+    }
+    .menu-coffee, .menu-pastry, .menu-specials {
+        font-size: 3vw; 
+        top: 40%; 
+    }
+    .menu-coffee:hover, .menu-pastry:hover, .menu-specials:hover {
+        font-size: 3vw; 
+    }
+
+    .title-aboutus {
+        font-size: 3vw; 
+    }
+    .content-aboutus {
+        font-size: 1.2vw; 
+    }
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 2 - 110px); 
+    }
+
+    nav li {
+        width: 80%; 
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .menu-title {
+        font-size: 18vw; 
+    }
+
+    .menu-coffee, .menu-pastry, .menu-specials {
+        font-size: 4vw; 
+        top: 25%; 
+    }
+
+    .menu-coffee:hover, .menu-pastry:hover, .menu-specials:hover {
+        font-size: 4vw; 
+    }
+    .title-aboutus {
+        font-size: 4vw; 
+    }
+
+    .content-aboutus {
+        font-size: 1.5vw; 
+    }
+
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 2 - 110px); 
+    }
+    nav li {
+        width:80%; 
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .menu-title {
+        font-size: 20vw; 
+    }
+
+    .menu-coffee, .menu-pastry, .menu-specials {
+        font-size: 5vw; 
+        top: 30%; 
+    }
+
+    .menu-coffee:hover, .menu-pastry:hover, .menu-specials:hover {
+        font-size: 5vw; 
+    }
+
+    .title-aboutus {
+        font-size: 5vw; 
+    }
+
+    .content-aboutus {
+        font-size: 2vw; 
+    }
+    .menu-section .menu-list .menu-item {
+        width: 100%;
+    }
+    nav li {
+        width: 100%; 
+    }
+}
