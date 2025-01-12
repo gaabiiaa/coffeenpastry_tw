@@ -100,14 +100,9 @@ div .text-slogan:hover {
     background-position: center;
 }*/
 
-.sticky-container {
-    position: sticky; 
-    top: 0; 
-    z-index: 10; 
-    background-color: #222; 
-    border-bottom: 1px solid #222; 
-    width:100%
-}
+
+
+
 
 /* HEADER */
 header {
@@ -124,6 +119,14 @@ header h1 {
 }
 
 /* NAVIGATION */
+.sticky-container {
+    position: sticky; 
+    top: 0; 
+    z-index: 10; 
+    background-color: #222; 
+    border-bottom: 1px solid #222; 
+    width:100%
+}
 nav {
     background-color:#222;
     padding: 0.3em;
@@ -214,7 +217,53 @@ nav a:hover {
     background-color: transparent;
     border: none;
 }
+/* USER */
+.welcome-container {
+    text-align: center;
+    background-color: transparent;
+}
 
+#welcomeMessage {
+    color: rgb(247, 232, 209);
+    font-size: 1.3rem;
+    font-family: monospace;
+    display: block;
+    width:100%;
+}
+
+.username {
+    font-weight: bold;
+    color: rgb(255, 202, 122);
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.username:hover {
+    color: rgb(247, 232, 209);
+    transition: all 0.3s ease;
+}
+
+.logout {
+    display: none;
+    position: absolute;
+    left: 20%;
+    top: 100%;
+    background-color: rgb(34, 34, 34, 0.7);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.username:hover .logout {
+    display: block;
+}
+
+.logout:hover {
+    text-decoration: underline white;
+    text-decoration-skip-ink: auto;
+    background-color: rgb(34, 34, 34, 0.7); 
+    color: white; 
+    padding: 0;
+}
 /* CUSTOMERS */
 .customers-container {
     display: grid;
