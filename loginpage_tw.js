@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginBox = document.querySelector('.login-box');
     const registerBox = document.querySelector('.register-box');
 
-    // Toggle between forms
+    // toggle login/register
     showRegister.addEventListener('click', (e) => {
         e.preventDefault();
         loginBox.style.display = 'none';
@@ -20,14 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
         loginBox.style.display = 'block';
     });
 
-    // Handle registration
+    // register
     registerForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const username = document.getElementById('registerUsername').value.trim();
         const email = document.getElementById('registerEmail').value.trim();
         const password = document.getElementById('registerPassword').value.trim();
 
-        // Basic validation
         if (!validateEmail(email)) {
             alert('Please enter a valid email address.');
             return;
@@ -46,11 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const newUser = { username, email, password };
         users.push(newUser);
         localStorage.setItem('users', JSON.stringify(users));
-
         alert(`Registration successful! Welcome, ${username}. Please log in!`);
     });
 
-    // Handle login
+    // login
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const email = document.getElementById('loginEmail').value.trim();

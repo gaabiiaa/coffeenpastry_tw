@@ -3,31 +3,65 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
 
     if (currentUser) {
-        // Determine if the user just registered or logged in
         const greeting = 'Welcome' 
 
-        // Create the welcome message with the username and logout option
+        //  welcome message + username + logout 
         welcomeMessage.innerHTML = `
             ${greeting}, <span class="username">${currentUser.username}!
                 <span class="logout">logout</span>
             </span>
         `;
 
-        // Add event listener for logout
         const logoutElement = document.querySelector('.logout');
         logoutElement.addEventListener('click', () => {
-            // Clear session storage
+            // clear session storage
             sessionStorage.removeItem('currentUser');
 
-            // Replace welcome message with login/register link
+            //  welcome message => login/register l
             welcomeMessage.innerHTML = `
                 <a href="loginpage_tw.html">login/register</a>
             `;
         });
     } else {
-        // If no user is logged in, show the login/register link
+        //  no user  logged in => login/register 
         welcomeMessage.innerHTML = `
             <a href="loginpage_tw.html">login/register</a>
         `;
     }
 });
+window.onload = function () {
+    setTimeout(() => {
+        const textSlogan = document.querySelector(".text-slogan");
+
+        textSlogan.style.visibility = "visible";
+        textSlogan.style.animation = "slideIn 1s ease-in-out forwards";
+
+        setInterval(() => {
+            changeTextColorAndLog(textSlogan);
+        }, 2000); 
+    }, 700); 
+};
+
+//  get a random RGB color
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 256); 
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+//  change text color r
+function changeTextColorAndLog(element) {
+    const newColor = getRandomColor();
+    element.style.color = newColor;
+
+    element.style.transition = "color 0.5s ease-in-out";
+
+    // detect current color 
+    const computedStyle = getComputedStyle(element);
+    const currentColor = computedStyle.color;
+
+    console.log(`The current color of the text is: ${currentColor}`);
+}
+ 
+

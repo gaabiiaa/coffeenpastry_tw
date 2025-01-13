@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1">
     <meta name="description" content="The best coffee shop in town, serving freshly brewed coffee and delicious pastries.">
     <link rel="icon" type="image/x-icon" href="mainpage_refs\coffee_haven.ico">
-    <link rel="canonical" href="https://coffeshop.com" />
     <link rel="stylesheet" href="menupage_tw.css">
+   
 </head>
 <body>
         <div class="sticky-container">
@@ -18,6 +18,7 @@
             <nav>
                 <ul class="responsiveNav">
                     <li class="navbar-item">
+                        <div class="welcome-message" id="welcomeMessage"></div>
                         <a href="mainpage_tw.html">home</a>
                         <a href="mainpage_tw.html#aboutus">about us</a>
                         <div class="menu-container">
@@ -42,7 +43,9 @@
                 <div class="menu-coffee">coffee</div>
                 <div class="menu-pastry">pastry</div>
                 <div class="menu-specials">specials</div>
+                <div id="recommendation"></div>
             </div>
+        
     </section>
 
         <section class="menu-section" id="coffee">
@@ -153,8 +156,10 @@
             </div>
         </section>
     <footer>
-        <p>© 2024 Coffee & Pastries</p>
+        <p>© 2024 Coffee & Pastry</p>
     </footer>
+    <script src="mainpage_tw.js"></script>
+    <script src="menupage_tw.js"></script>
 </body>
 
 </html>

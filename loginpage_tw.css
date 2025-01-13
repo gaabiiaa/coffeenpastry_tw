@@ -102,3 +102,97 @@ button {
 .login-link p a:hover, .register-link p a:hover {
     text-decoration: underline;
 }
+
+/* puns */
+.message-box {
+    flex: 1;
+    max-width: 500px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: #ebdacc;
+    overflow-y: auto; 
+    height: 80%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+.message-box div {
+    margin: 10px 0;
+    padding: 10px;
+    border: 3px solid #e4b0836e;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.left-box {
+    margin-right: 20px;
+}
+
+.right-box {
+    margin-left: 20px;
+}
+
+
+
+/* 900px to 1023px */
+@media (min-width: 900px) and (max-width: 1023px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .login-box, .register-box {
+        max-width: 400px;
+    }
+
+    .message-box {
+        max-width: 300px;
+        height: 500px;
+    }
+}
+
+/* 640px to 899px */
+@media (min-width: 640px) and (max-width: 899px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .login-box, .register-box {
+        max-width: 350px;
+    }
+
+    .message-box {
+        max-width: 280px;
+        height: 400px;
+    }
+}
+
+/* <640px */
+@media (max-width: 639px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .login-box, .register-box {
+        max-width: 300px;
+    }
+
+    .message-box {
+        max-width: 250px;
+        height: 300px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}

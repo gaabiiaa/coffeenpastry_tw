@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1">
     <meta name="description" content="The best coffee shop in town, serving freshly brewed coffee and delicious pastries.">
     <link rel="icon" type="image/x-icon" href="mainpage_refs\coffee_haven.ico">
-    <link rel="canonical" href="https://coffeshop.com" />
     <link rel="stylesheet" href="mainpage_tw.css">
-    <script src="mainpage_tw.js"></script>
+    
 
 </head>
 <body>
@@ -45,6 +44,7 @@
     <div class="section1">
         <div class="text">COFFEE&PASTRY</div>
         <div class="text-slogan">~ Espresso yourself! ~</div>
+        <p id="color-info" style="margin-top: 10px; font-family: Arial, sans-serif;"></p>
     </div>
     
     <div class="section2" id="aboutus">
@@ -160,12 +160,33 @@
                     <p> www.coffenpastry.com </p>
                 </li>
             </ul>
-            <form action="#" class="contact-form">
-                <input type="text" placeholder="your name" class="form-input" required>
-                <input type="email" placeholder="your email" class="form-input" required>
-                <textarea placeholder="your message" class="form-input" required></textarea>
-                <button class="submit-button">Submit</button>
+            <form class="contact-form" id="contact-form">
+                <input type="text" placeholder="Your Name" class="form-input" id="name" required>
+                
+                <select id="rating" class="form-input" required>
+                    <option value="0">0.0</option>
+                    <option value="0.5">0.5</option>
+                    <option value="1">1.0</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2.0</option>
+                    <option value="2.5">2.5</option>
+                    <option value="3">3.0</option>
+                    <option value="3.5" selected>3.5</option>
+                    <option value="4">4.0</option>
+                    <option value="4.5">4.5</option>
+                    <option value="5">5.0</option>
+                </select>
+                
+                <textarea placeholder="Your Message" class="form-input" id="message" required></textarea>
+                <button class="submit-button" type="submit">Submit</button>
+            
+                <div id="success-message" class="success-message" style="display: none;"> Thank you for your review! </div>
+                <button id="delete-review" style="display: none;">Delete Review</button>
             </form>
+            
+           
+            
+            <script src="form_tw.js"></script>
         </div>
         <div class="map-container">
             <div class="map">
@@ -178,6 +199,7 @@
     <footer>
         <p>© 2024 Coffee & Pastry</p>
     </footer>
+    <script src="mainpage_tw.js"></script>
 </body>
 
 </html>
