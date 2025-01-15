@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (user) {
             sessionStorage.setItem('currentUser', JSON.stringify(user));
             alert(`Login successful! Welcome, ${user.username}.`);
-            window.location.href = 'mainpage_tw.html';
+            window.location.href = 'index.html';
         } else {
             alert('Invalid email or password.');
         }
