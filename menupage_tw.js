@@ -16,5 +16,5 @@ function recommendProduct() {
 
     recommendationElement.textContent = recommendation;
 }
-
+setInterval(recommendProduct, 60000);
 window.onload = recommendProduct;
